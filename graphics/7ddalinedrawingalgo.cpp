@@ -41,5 +41,4 @@ int main()
 		yk += yinc;
 	}
 	return 0;
-	
 }
