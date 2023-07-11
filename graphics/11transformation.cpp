@@ -11,6 +11,20 @@ void drawTriangle(int x0, int y0, int  x1, int y1, int x2, int y2)
 	line(200+x0, 200-y0, 200+x2, 200-y2);
 }
 
+int* matxMult(int** matx1, int* matx2)
+{
+	int* matRes;
+	for(int i=0; i<3; i++)
+	{
+		matRes[i] = 0;
+		for(int j=0; j<3; j++)
+		{
+			matRes[i] = matRes[i] + matx1[i][j] * matx2[j];
+		}
+	}
+	return matRes;
+}
+
 int main()
 {
 	int choice, x0, y0, x1, y1, x2, y2;
